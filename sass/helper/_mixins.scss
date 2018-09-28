@@ -1,0 +1,35 @@
+@mixin position-property($position) {
+    position: $position;
+}
+
+@mixin display-property($display) {
+    display: $display;
+}
+
+@mixin background-color($background-color) {
+    background-color: $background-color;
+}
+
+@mixin color($color) {
+    color: $color;
+}
+
+@mixin width($width) {
+    width: $width;
+}
+
+@mixin height($height) {
+    height: $height;
+}
+
+@mixin text-hover($background-color) {
+    &:hover {
+        background-color: $background-color;
+    } 
+}
+
+@mixin color-hover($color) {
+    &:hover {
+        color: $color;
+    } 
+}

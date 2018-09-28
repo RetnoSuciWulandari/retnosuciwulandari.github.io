@@ -1,0 +1,482 @@
+//Google font import
+@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
+@import url(https://fonts.googleapis.com/css?family=Gaegu:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+@import url(https://fonts.googleapis.com/css?family=Courgette);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+@import url(https://fonts.googleapis.com/css?family=Hammersmith+One);
+
+//Helper import
+@import "helper/mixins";
+@import "helper/placeholders";
+@import "helper/variables";
+
+
+//Universal style
+body {
+    background-color: $website-background;
+}
+
+//Header
+nav {
+    background-color: $font-color;
+    @include height(20px);
+    
+    .navbar-brand {
+        margin-right: -690px;
+        #avatar {
+            @include width(5%);
+        }
+    }
+    
+    .menu {
+        @include background-color(#74C2E1);
+        margin: 0 4px;
+        font-size: 14px;
+            a {
+                text-decoration: none;
+            }
+                p {
+                    @include color(#2B4954);
+                    margin-bottom: 0px;
+                    font: {
+                        weight: bold;
+                        family: $bree-serif;
+                    }
+                }
+    }
+    
+    .dropup {
+        @include position-property(relative);
+        @include display-property(inline-block);
+        .dropbtn {
+            @include background-color(#74C2E1);
+            margin: 0 4px;
+            font-size: 14px;
+                a {
+                    text-decoration: none;
+                    }
+                    p {
+                        @include color(#2B4954);
+                        margin-bottom: 0px;
+                        font: {
+                            weight: bold;
+                            family: $bree-serif;
+                        }
+                    }
+        }
+        .dropup-content {
+            @include display-property(none);
+            @include position-property(absolute);
+            @include background-color(#F1F1F1);
+            min-width: 160px;
+            bottom: 57px;
+            z-index: 1;
+            opacity: 0.7;
+            a {
+                text-decoration: none;
+                padding: 12px 16px;
+                @include color(#213740);
+                @include display-property(block);  
+                @include text-hover(#CCC);
+            }
+        }
+    }
+}
+
+
+.dropup:hover .dropbtn {
+    @include background-color(#267A4A);
+    padding: 16px;
+}
+
+.dropup:hover .dropup-content {
+    @include display-property(block);
+    font-family: $bree-serif;
+}
+
+//Carousel
+.item {
+    h1 {
+        font: {
+            family: $gaegu;
+            size: 90px;
+            weight: 900;
+        }
+        margin-bottom: 20px;
+        @include color(#1D2841);
+    }
+    
+    p {
+        font: {
+            family: $gaegu;
+            size: 40px;
+        }
+        @include color(#1D2841);
+    }
+}
+
+//Profile
+#home {
+    h2 {
+        font: {
+            family: $tech-mono;
+            weight: bold;
+        }
+        color: $font-color;
+        text-align: center;
+        padding-top: 10px;
+        margin-bottom: 25px;
+        margin-top: 50px;
+            .blinking-cursor {
+                @extend %blinking-cursor;
+            }
+    }
+    
+    img {
+        @include width(20%);
+        border-radius: 50%;
+        margin-bottom: 20px;
+        margin-left: 40%; 
+    }
+    
+    p {
+        font-family: $varela-round;
+        color: $font-color;
+    }
+}
+
+//Web projects
+#web-projects {
+    h2 {
+        font: {
+            family: $tech-mono;
+            weight: bold;
+        }
+        color: $font-color;
+        text-align: center;
+        padding-top: 10px;
+        margin-bottom: 40px;
+    }
+    h3 {
+        font-family: $varela-round;
+        color: $font-color; 
+    }
+    p {
+        font-family: $varela-round;
+        color: $font-color;
+    }    
+}
+
+.image-one img, .image-two img, .image-three img, .image-four img {
+    border-radius: 5%;
+}
+        
+.project-one, .project-two, .project-three, .project-four {
+    @extend %projects;
+}
+
+.button-one, .button-two, .button-three, .button-four {
+    @extend %buttons;
+}
+
+.image-one:hover .project-one, .image-two:hover .project-two, .image-three:hover .project-three, .image-four:hover .project-four {
+    opacity: 0.3;
+}
+
+
+.image-one:hover .button-one, .image-two:hover .button-two, .image-three:hover .button-three, .image-four:hover .button-four {
+    opacity: 1;
+}
+
+.caption {
+    @extend %captions;
+}
+        
+.caption a {
+    text-decoration: none;
+    @include color-hover(#4C544B);
+}
+        
+//Business assignments
+.assignments {
+    h2 {
+        font: {
+            family: $tech-mono;
+            weight: bold;
+        }
+        color: $font-color;
+        text-align: center;
+        padding-top: 10px;
+    }
+    p {
+        font-family: $varela-round;
+        color: $font-color; 
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+
+.download-one img, .download-two img {
+    @include width(50px);
+}
+
+ .essay, .report {
+    @include display-property(block);
+    @include width(100%);
+    @include height(auto);
+}
+
+.overlay-one, .overlay-two {
+    @extend %overlay;
+}
+
+.animation-one:hover .overlay-one, .animation-two:hover .overlay-two {
+  bottom: 0;
+  @include height(100%);
+}
+
+.text {
+    @extend %text;
+}
+
+//CV
+#cv {
+    h2 {
+        font: {
+            family: $tech-mono;
+            weight: bold;
+        }
+        color: $font-color;
+        text-align: center;
+        padding-top: 10px;
+        margin-bottom: 40px;
+    }
+}
+
+.cv {
+    @include display-property(flex);
+    justify-content: center;
+        #myCV {
+            @extend %cv;
+        }
+}
+
+#myCV:hover {
+    opacity: 0.7;
+}
+
+.modal {
+    @extend %modal;
+    .close {
+        @extend %close;
+    }
+}
+
+.modal-content { 
+    @extend %modal-content;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+.close:hover,
+.close:focus {
+    color: #BBB;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 768px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+.description {
+    p {
+        text-align: justify;
+        font-family: $varela-round;
+        color: $font-color;
+        margin-top: 20px;
+    }
+}
+
+
+//Legit
+#legit {
+    h2 {
+        font: {
+            family: $tech-mono;
+            weight: bold;
+        }
+        color: $font-color;
+        text-align: center;
+        padding-top: 10px;
+        margin-bottom: 30px;
+    }
+}
+
+.email {
+    @include display-property(flex);
+    justify-content: center;
+    margin-bottom: -75px;
+        .hover {
+            margin-bottom: 90px;
+        }
+}
+        
+.hovereffect {
+    @extend %hovereffect;
+    img {
+        @include display-property(block);
+        @include position-property(relative);
+    }
+    .frame {
+        @extend %frame;
+            h3 {
+              @extend %heading;
+              font-family: $hammersmith;
+            }
+            p {
+              @extend %paragraph;
+            }
+    }
+}
+
+.hovereffect:hover h3 {
+  opacity: 0;
+  -webkit-transform: translate3d(-50%,-50%,0) scale3d(0.8,0.8,1);
+  transform: translate3d(-50%,-50%,0) scale3d(0.8,0.8,1);
+}
+
+.hovereffect .frame:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40%;
+  height: 60%;
+  border: 2px solid #fff;
+  content: '';
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,60deg) scale3d(0,0,1);
+  transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,60deg) scale3d(0,0,1);
+  -webkit-transform-origin: 50%;
+  -ms-transform-origin: 50%;
+  transform-origin: 50%;
+}
+
+
+.hovereffect p a {
+  color: #fff;
+}
+
+.hovereffect p a:hover,
+.hovereffect p a:focus {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+
+.hovereffect  a i {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  padding: 0px 5px;
+}
+
+
+.hovereffect:hover .frame:before {
+  opacity: 1;
+  background-color: rgba(0,0,0,0.7);
+  -webkit-transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-137deg) scale3d(1,1,1);
+  transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-137deg) scale3d(1,1,1);
+}
+
+.hovereffect:hover p i {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  opacity: 1;
+}
+
+.socmed {
+    display: flex;
+    justify-content: center;
+    
+        a {
+            text-decoration: none;
+        }
+        img {
+            @include width(90px);
+            padding: 0 10px;        
+        }
+}
+
+    
+//Blog
+#blog {
+    h2 {
+        font: {
+            family: $tech-mono;
+            weight: bold;
+        }
+        color: $font-color;
+        text-align: center;
+        padding-top: 10px;
+        margin-top: 10px;
+        }
+    p {
+        font-family: $varela-round;
+        color: $font-color; 
+        margin-bottom: -90px;
+        text-align: center;
+    }
+}
+
+.screen {
+    position: relative;
+    max-width: 400px;
+    img {
+        width: 100%;
+        height: auto;
+        padding-top: 90px;
+        margin-bottom: 20px;
+    }
+    .btn {
+        @extend %screen;
+        a {
+            text-decoration: none;
+            font-weight: bold; 
+            font-family: $hammersmith;
+        }
+    }
+}
+
+.screen .btn:hover {
+    @include text-hover(#121412);
+}
+
+.btn a:after {
+    @extend %btn;
+}
+
+.btn:hover a:after {
+  opacity: 1;
+}
+
+//Footer
+footer {
+    @extend %footer;
+}
+
+.copyright {
+    @extend %copyright;
+}
