@@ -889,7 +889,9 @@ nav .dropup .dropup-content a:hover {
   font-family: "Share Tech Mono", monospace;
   font-weight: bold;
   color: #C6E4E6;
-  margin: 10px 0 -55px 5rem;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: -55px;
 }
 
 .screen {
