@@ -895,9 +895,10 @@ nav .dropup .dropup-content a:hover {
 }
 
 .screen {
-  position: relative;
-  max-width: 400px;
+  display: flex;
+  justify-content: center;
 }
+
 .screen img {
   width: 100%;
   height: auto;
