@@ -397,6 +397,7 @@ nav .dropup .dropup-content a:hover {
 #home p {
   font-family: "Varela Round", sans-serif;
   color: #C6E4E6;
+  text-align: centre;
 }
 
 @media only screen and (max-width: 1012px) {
